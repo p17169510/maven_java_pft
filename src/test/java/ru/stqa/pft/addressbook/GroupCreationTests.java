@@ -16,16 +16,12 @@ public class GroupCreationTests {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "C:\\stud\\maven_java_pft\\src\\test\\resources\\chromedriver89.0.4389.23.exe");
         driver = new ChromeDriver();
-//        baseUrl = "https://www.google.com/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
 
-    @Test
-    public void testGroupCreationTests() throws Exception {
         driver.get("http://localhost/addressbook/group.php");
         driver.findElement(By.name("user")).click();
         driver.findElement(By.name("user")).clear();
@@ -33,6 +29,11 @@ public class GroupCreationTests {
         driver.findElement(By.name("pass")).clear();
         driver.findElement(By.name("pass")).sendKeys("secret");
         driver.findElement(By.xpath("//input[@value='Login']")).click();
+    }
+
+    @Test
+    public void testGroupCreation() throws Exception {
+
         driver.findElement(By.linkText("groups")).click();
         driver.findElement(By.name("new")).click();
         driver.findElement(By.name("group_name")).click();
@@ -48,7 +49,7 @@ public class GroupCreationTests {
         driver.findElement(By.linkText("group page")).click();
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
