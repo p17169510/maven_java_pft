@@ -45,7 +45,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests.testGroupCreationTests">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.stqa.pft.addressbook" />
+    </key>
+  </component>
+  <component name="RunManager">
     <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="maven_java_pft" />
       <extension name="coverage">
@@ -81,10 +86,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="maven_java_pft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.GroupDeletionTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupDeletionTests.testGroupDeletion" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="maven_java_pft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.GroupDeletionTests" />
+      <option name="METHOD_NAME" value="testGroupDeletion" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GroupCreationTests.testGroupCreationTests" />
+        <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
+        <item itemvalue="TestNG.GroupCreationTests.testGroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -107,25 +149,29 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1260" height="107" key="GridCell.Tab.0.bottom" timestamp="1616596595879">
+    <state x="708" y="112" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1616687751873">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="107" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1616596595879" />
+    <state x="708" y="112" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1304.768@0.0.1304.768" timestamp="1616687751873" />
+    <state width="1260" height="287" key="GridCell.Tab.0.bottom" timestamp="1616692317949">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state width="1260" height="287" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1616692317949" />
     <state width="1322" height="205" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616432737232" />
-    <state width="1260" height="107" key="GridCell.Tab.0.center" timestamp="1616596595879">
+    <state width="1260" height="287" key="GridCell.Tab.0.center" timestamp="1616692317949">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="107" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1616596595879" />
+    <state width="1260" height="287" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1616692317949" />
     <state width="1322" height="205" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="107" key="GridCell.Tab.0.left" timestamp="1616596595878">
+    <state width="1260" height="287" key="GridCell.Tab.0.left" timestamp="1616692317949">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="107" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1616596595878" />
+    <state width="1260" height="287" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1616692317949" />
     <state width="1322" height="205" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="107" key="GridCell.Tab.0.right" timestamp="1616596595879">
+    <state width="1260" height="287" key="GridCell.Tab.0.right" timestamp="1616692317949">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="107" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1616596595879" />
+    <state width="1260" height="287" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1616692317949" />
     <state width="1322" height="205" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
     <state width="1322" height="253" key="GridCell.Tab.1.bottom" timestamp="1616432231300">
       <screen x="0" y="0" width="1366" height="728" />
@@ -152,9 +198,9 @@
     </state>
     <state x="176" y="0" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1616436219616" />
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1616349925810" />
-    <state x="382" y="138" width="540" height="500" key="extract.method.dialog" timestamp="1616435471046">
+    <state x="382" y="138" width="540" height="500" key="extract.method.dialog" timestamp="1616687672819">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="382" y="138" width="540" height="500" key="extract.method.dialog/0.0.1304.768@0.0.1304.768" timestamp="1616435471046" />
+    <state x="382" y="138" width="540" height="500" key="extract.method.dialog/0.0.1304.768@0.0.1304.768" timestamp="1616687672819" />
   </component>
 </project>
