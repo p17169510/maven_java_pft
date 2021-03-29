@@ -25,7 +25,7 @@ public class GroupCreationTests {
     public void testGroupCreationTests() throws Exception {
         login();
         newGroup();
-        fillGroupFields();
+        fillGroupFields(new GroupData("name1", "header1", "footer1"));
         enterInformation();
         returnToTheGroupPage();
     }
@@ -38,16 +38,16 @@ public class GroupCreationTests {
         driver.findElement(By.name("submit")).click();
     }
 
-    private void fillGroupFields() {
+    private void fillGroupFields(GroupData groupData) {
         driver.findElement(By.name("group_name")).click();
         driver.findElement(By.name("group_name")).clear();
-        driver.findElement(By.name("group_name")).sendKeys("name1");
+        driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
         driver.findElement(By.name("group_header")).click();
         driver.findElement(By.name("group_header")).clear();
-        driver.findElement(By.name("group_header")).sendKeys("header1");
+        driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
         driver.findElement(By.name("group_footer")).click();
         driver.findElement(By.name("group_footer")).clear();
-        driver.findElement(By.name("group_footer")).sendKeys("footer1");
+        driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
     }
 
     private void newGroup() {
