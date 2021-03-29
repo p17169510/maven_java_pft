@@ -52,10 +52,20 @@
       <recent name="ru.stqa.pft.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests.testGroupCreation">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="maven_java_pft" />
+  <component name="RunManager" selected="TestNG.GroupCreationTests.testGroupCreationTests">
+    <configuration name="GroupCreationTests (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.GroupCreationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,34 +105,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="maven_java_pft" />
+    <configuration name="GroupCreationTests.testGroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.appmanager.*" />
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupDeletionTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.GroupCreationTests" />
+      <option name="METHOD_NAME" value="testGroupCreationTests" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupDeletionTests.testGroupDeletion" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupModificationTests.testGroupModification" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="maven_java_pft" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.appmanager.*" />
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupDeletionTests" />
-      <option name="METHOD_NAME" value="testGroupDeletion" />
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupModificationTests" />
+      <option name="METHOD_NAME" value="testGroupModification" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -132,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupCreationTests.testGroupCreationTests" />
+        <item itemvalue="TestNG.GroupCreationTests (1)" />
+        <item itemvalue="TestNG.GroupModificationTests.testGroupModification" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="TestNG.GroupDeletionTests" />
-        <item itemvalue="TestNG.GroupDeletionTests.testGroupDeletion" />
       </list>
     </recent_temporary>
   </component>
@@ -167,25 +178,25 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="144" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1304.768@0.0.1304.768" timestamp="1616770164824" />
-    <state width="1260" height="205" key="GridCell.Tab.0.bottom" timestamp="1616797460246">
+    <state width="1260" height="265" key="GridCell.Tab.0.bottom" timestamp="1617015326331">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="205" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1616797460246" />
+    <state width="1260" height="265" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617015326331" />
     <state width="1322" height="205" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616432737232" />
-    <state width="1260" height="205" key="GridCell.Tab.0.center" timestamp="1616797460246">
+    <state width="1260" height="265" key="GridCell.Tab.0.center" timestamp="1617015326331">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="205" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1616797460246" />
+    <state width="1260" height="265" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1617015326331" />
     <state width="1322" height="205" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="205" key="GridCell.Tab.0.left" timestamp="1616797460246">
+    <state width="1260" height="265" key="GridCell.Tab.0.left" timestamp="1617015326330">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="205" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1616797460246" />
+    <state width="1260" height="265" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1617015326330" />
     <state width="1322" height="205" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="205" key="GridCell.Tab.0.right" timestamp="1616797460246">
+    <state width="1260" height="265" key="GridCell.Tab.0.right" timestamp="1617015326331">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="205" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1616797460246" />
+    <state width="1260" height="265" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1617015326331" />
     <state width="1322" height="205" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
     <state width="1260" height="245" key="GridCell.Tab.1.bottom" timestamp="1616769754632">
       <screen x="0" y="0" width="1304" height="768" />
@@ -228,6 +239,10 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="698" y="0" width="606" height="768" key="find.popup/0.0.1304.768@0.0.1304.768" timestamp="1616770001653" />
+    <state x="69" y="81" key="new project wizard" timestamp="1617014174107">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="69" y="81" key="new project wizard/0.0.1304.768@0.0.1304.768" timestamp="1617014174107" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -236,11 +251,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/GrandTest.java</url>
           <line>1</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java</url>

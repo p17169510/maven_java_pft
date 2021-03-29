@@ -6,7 +6,11 @@
 
     <groupId>org.example</groupId>
     <artifactId>maven_java_pft</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>addressbook-web-tests</module>
+    </modules>
 
     <dependencies>
         <dependency>
