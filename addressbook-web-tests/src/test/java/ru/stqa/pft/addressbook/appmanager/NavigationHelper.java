@@ -10,8 +10,8 @@ public class NavigationHelper {
     this.driver = driver;
   }
 
-  public void goToNewGroup() {
-    driver.findElement(By.name("new")).click();
+  public void goToGroupsPage() {
+    driver.findElement(By.linkText("groups")).click();
   }
 
   public void goToNewContact() {

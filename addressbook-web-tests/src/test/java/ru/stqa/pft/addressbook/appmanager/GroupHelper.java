@@ -30,4 +30,8 @@ public class GroupHelper {
   public void returnToGroupPage() {
     driver.findElement(By.linkText("group page")).click();
   }
+
+  public void newGroup() {
+    driver.findElement(By.name("new")).click();
+  }
 }

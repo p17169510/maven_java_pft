@@ -10,6 +10,7 @@ import static org.testng.Assert.fail;
 public class ApplicationManager {
   protected WebDriver driver;
 
+  private SessionHelper sessionHelper;
   private  NavigationHelper navigationHelper;
   private GroupHelper groupHelper;
   private ContactHelper contactHelper;
@@ -23,8 +24,10 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(driver);
     contactHelper = new ContactHelper(driver);
     groupHelper = new GroupHelper(driver);
+    sessionHelper = new SessionHelper(driver);
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    sessionHelper.login("admin", "secret");
   }
 
   public void stopDriver() {
@@ -33,16 +36,6 @@ public class ApplicationManager {
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
     }
-  }
-
-  public void login() {
-    driver.get("http://localhost/addressbook/edit.php");
-    driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.name("pass")).click();
-    driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
-    driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
 
