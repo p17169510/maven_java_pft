@@ -9,7 +9,7 @@ public class ContactCreationTests extends TestBase {
   public void testContactCreation() throws Exception {
     applicationManager.login();
     applicationManager.goToNewContact();
-    applicationManager.fillContactFields(
+    applicationManager.getContactHelper().fillContactFields(
         new ContactData("name", "MiddleName", "LastName", "NickName", "mr",
             "CompName", "My Home address",
             "+79130000000", "+777777777", "+495100100", "+495999999",
@@ -19,8 +19,8 @@ public class ContactCreationTests extends TestBase {
             "test99999",
             "secondary address", "secondary home", "secondary notes"));
 
-    applicationManager.submitCreatingContact();
-    applicationManager.returnToHomePage();
+    applicationManager.getContactHelper().submitCreatingContact();
+    applicationManager.getContactHelper().returnToHomePage();
   }
 
 }
