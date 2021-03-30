@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86225245-1c55-44f4-98d9-f85f22c8a129" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/SessionHelper.java" afterDir="false" />
+    <list default="true" id="86225245-1c55-44f4-98d9-f85f22c8a129" name="Default Changelist" comment="EXCERSISE 5: Created BaseHelper">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/BaseHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/GroupHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/SessionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/SessionHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactCreationTests.testContactCreation">
+  <component name="RunManager" selected="TestNG.GroupCreationTests.testGroupCreationTests">
     <configuration name="ContactCreationTests.testContactCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests" />
       <extension name="coverage">
@@ -172,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreationTests" />
+        <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
         <item itemvalue="TestNG.GroupModificationTests.testGroupModification" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617102088020</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="EXCERSISE 5: added method goToGroupsForm">
+      <created>1617106977113</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617106977113</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,13 +239,14 @@
     <MESSAGE value="EXCERSISE 5: changed sequence of methods and minor renaming" />
     <MESSAGE value="EXCERSISE 5: added ContactHelper.java" />
     <MESSAGE value="EXCERSISE 5: added NavigationHelper.java and GroupHelper.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="EXCERSISE 5: added NavigationHelper.java and GroupHelper.java" />
+    <MESSAGE value="EXCERSISE 5: added method goToGroupsForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXCERSISE 5: added method goToGroupsForm" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="481" y="59" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1617101958198">
+    <state x="576" y="130" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1617114347319">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="481" y="59" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1304.768@0.0.1304.768" timestamp="1617101958198" />
+    <state x="576" y="130" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1304.768@0.0.1304.768" timestamp="1617114347319" />
     <state x="421" y="213" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1617092935710">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
@@ -252,75 +259,75 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="659" y="109" key="#xdebugger.evaluate/0.0.1304.768@0.0.1304.768" timestamp="1617105114533" />
-    <state x="76" y="46" width="755" height="587" key="CommitChangelistDialog2" timestamp="1617102087280">
+    <state x="76" y="46" width="755" height="587" key="CommitChangelistDialog2" timestamp="1617114400105">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="76" y="46" width="755" height="587" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1617102087280" />
-    <state width="1260" height="251" key="GridCell.Tab.0.bottom" timestamp="1617106053817">
+    <state x="76" y="46" width="755" height="587" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1617114400105" />
+    <state width="1260" height="157" key="GridCell.Tab.0.bottom" timestamp="1617114706682">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="251" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617106053817" />
+    <state width="1260" height="157" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617114706682" />
     <state width="1322" height="205" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616432737232" />
-    <state width="1260" height="251" key="GridCell.Tab.0.center" timestamp="1617106053817">
+    <state width="1260" height="157" key="GridCell.Tab.0.center" timestamp="1617114706681">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="251" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1617106053817" />
+    <state width="1260" height="157" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1617114706681" />
     <state width="1322" height="205" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="251" key="GridCell.Tab.0.left" timestamp="1617106053816">
+    <state width="1260" height="157" key="GridCell.Tab.0.left" timestamp="1617114706681">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="251" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1617106053816" />
+    <state width="1260" height="157" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1617114706681" />
     <state width="1322" height="205" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="251" key="GridCell.Tab.0.right" timestamp="1617106053817">
+    <state width="1260" height="157" key="GridCell.Tab.0.right" timestamp="1617114706681">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="251" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1617106053817" />
+    <state width="1260" height="157" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1617114706681" />
     <state width="1322" height="205" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="241" key="GridCell.Tab.1.bottom" timestamp="1617105153738">
+    <state width="1260" height="196" key="GridCell.Tab.1.bottom" timestamp="1617112797349">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="241" key="GridCell.Tab.1.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617105153737" />
+    <state width="1260" height="196" key="GridCell.Tab.1.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617112797349" />
     <state width="1322" height="253" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616432231300" />
-    <state width="1260" height="241" key="GridCell.Tab.1.center" timestamp="1617105153737">
+    <state width="1260" height="196" key="GridCell.Tab.1.center" timestamp="1617112797348">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="241" key="GridCell.Tab.1.center/0.0.1304.768@0.0.1304.768" timestamp="1617105153737" />
+    <state width="1260" height="196" key="GridCell.Tab.1.center/0.0.1304.768@0.0.1304.768" timestamp="1617112797348" />
     <state width="1322" height="253" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1616432231300" />
-    <state width="1260" height="241" key="GridCell.Tab.1.left" timestamp="1617105153737">
+    <state width="1260" height="196" key="GridCell.Tab.1.left" timestamp="1617112797348">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="241" key="GridCell.Tab.1.left/0.0.1304.768@0.0.1304.768" timestamp="1617105153737" />
+    <state width="1260" height="196" key="GridCell.Tab.1.left/0.0.1304.768@0.0.1304.768" timestamp="1617112797348" />
     <state width="1322" height="253" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1616432231300" />
-    <state width="1260" height="241" key="GridCell.Tab.1.right" timestamp="1617105153737">
+    <state width="1260" height="196" key="GridCell.Tab.1.right" timestamp="1617112797349">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="241" key="GridCell.Tab.1.right/0.0.1304.768@0.0.1304.768" timestamp="1617105153737" />
+    <state width="1260" height="196" key="GridCell.Tab.1.right/0.0.1304.768@0.0.1304.768" timestamp="1617112797349" />
     <state width="1322" height="253" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1616432231300" />
     <state x="432" y="11" key="RefactorJ.IntroduceParameterObject" timestamp="1617032850721">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="432" y="11" key="RefactorJ.IntroduceParameterObject/0.0.1304.768@0.0.1304.768" timestamp="1617032850721" />
-    <state x="860" y="179" key="ReplaceDuplicatesPrompt" timestamp="1616796927333">
+    <state x="860" y="179" key="ReplaceDuplicatesPrompt" timestamp="1617113262751">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="860" y="179" key="ReplaceDuplicatesPrompt/0.0.1304.768@0.0.1304.768" timestamp="1616796927333" />
+    <state x="860" y="179" key="ReplaceDuplicatesPrompt/0.0.1304.768@0.0.1304.768" timestamp="1617113262751" />
     <state x="176" y="0" key="SettingsEditor" timestamp="1617032957535">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="176" y="0" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1617032957535" />
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1616349925810" />
-    <state x="244" y="116" key="Vcs.Push.Dialog.v2" timestamp="1617102095653">
+    <state x="244" y="116" key="Vcs.Push.Dialog.v2" timestamp="1617106979312">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="244" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1617102095653" />
+    <state x="244" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1617106979312" />
     <state x="401" y="117" key="VcsDiffUtil.ChangesDialog" timestamp="1617094278462">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="401" y="117" key="VcsDiffUtil.ChangesDialog/0.0.1304.768@0.0.1304.768" timestamp="1617094278462" />
-    <state x="655" y="125" width="540" height="500" key="extract.method.dialog" timestamp="1617086435807">
+    <state x="655" y="125" width="540" height="500" key="extract.method.dialog" timestamp="1617113207806">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="655" y="125" width="540" height="500" key="extract.method.dialog/0.0.1304.768@0.0.1304.768" timestamp="1617086435807" />
+    <state x="655" y="125" width="540" height="500" key="extract.method.dialog/0.0.1304.768@0.0.1304.768" timestamp="1617113207806" />
     <state x="698" y="0" width="606" height="768" key="find.popup" timestamp="1617105318895">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
@@ -356,11 +363,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
           <line>13</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/GrandTest.java</url>

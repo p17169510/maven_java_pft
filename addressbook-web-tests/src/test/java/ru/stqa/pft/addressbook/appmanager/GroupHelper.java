@@ -4,27 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-public class GroupHelper {
-  private WebDriver driver;
+public class GroupHelper extends BaseHelper {
 
   public GroupHelper(WebDriver driver) {
-    this.driver = driver;
+    super(driver);
   }
 
   public void fillGroupFields(GroupData groupData) {
-    driver.findElement(By.name("group_name")).click();
-    driver.findElement(By.name("group_name")).clear();
-    driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
-    driver.findElement(By.name("group_header")).click();
-    driver.findElement(By.name("group_header")).clear();
-    driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
-    driver.findElement(By.name("group_footer")).click();
-    driver.findElement(By.name("group_footer")).clear();
-    driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
+    type(By.name("group_name"), groupData.getGroupName());
+    type(By.name("group_header"), groupData.getGroupHeader());
+    type(By.name("group_footer"), groupData.getGroupFooter());
   }
 
   public void submitGroupCreation() {
-    driver.findElement(By.name("submit")).click();
+    click(By.name("submit"));
   }
 
   public void returnToGroupPage() {
@@ -32,6 +25,6 @@ public class GroupHelper {
   }
 
   public void newGroup() {
-    driver.findElement(By.name("new")).click();
+    click(By.name("new"));
   }
 }

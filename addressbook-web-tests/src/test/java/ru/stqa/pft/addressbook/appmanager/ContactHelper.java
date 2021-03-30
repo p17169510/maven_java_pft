@@ -2,88 +2,46 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactHelper {
-  private WebDriver driver;
+public class ContactHelper  extends BaseHelper {
 
   public ContactHelper(WebDriver driver) {
-    this.driver = driver;
+    super(driver);
   }
 
   public void fillContactFields(ContactData contactData) {
-    driver.findElement(By.name("firstname")).click();
-    driver.findElement(By.name("firstname")).clear();
-    driver.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-    driver.findElement(By.name("middlename")).click();
-    driver.findElement(By.name("middlename")).clear();
-    driver.findElement(By.name("middlename")).sendKeys(contactData.getMiddleName());
-    driver.findElement(By.name("lastname")).click();
-    driver.findElement(By.name("lastname")).clear();
-    driver.findElement(By.name("lastname")).sendKeys(contactData.getLastName());
-    driver.findElement(By.name("nickname")).click();
-    driver.findElement(By.name("nickname")).clear();
-    driver.findElement(By.name("nickname")).sendKeys(contactData.getNickName());
-    driver.findElement(By.name("title")).click();
-    driver.findElement(By.name("title")).clear();
-    driver.findElement(By.name("title")).sendKeys(contactData.getTitle());
-    driver.findElement(By.name("company")).click();
-    driver.findElement(By.name("company")).clear();
-    driver.findElement(By.name("company")).sendKeys(contactData.getCompany());
-    driver.findElement(By.name("address")).click();
-    driver.findElement(By.name("address")).clear();
-    driver.findElement(By.name("address")).sendKeys(contactData.getAddress());
-    driver.findElement(By.name("home")).click();
-    driver.findElement(By.name("home")).clear();
-    driver.findElement(By.name("home")).sendKeys(contactData.getHomePhoneNum());
-    driver.findElement(By.name("mobile")).click();
-    driver.findElement(By.name("mobile")).clear();
-    driver.findElement(By.name("mobile")).sendKeys(contactData.getMobilePhoneNum());
-    driver.findElement(By.name("work")).click();
-    driver.findElement(By.name("work")).clear();
-    driver.findElement(By.name("work")).sendKeys(contactData.getWorkPhoneNum());
-    driver.findElement(By.name("fax")).click();
-    driver.findElement(By.name("fax")).clear();
-    driver.findElement(By.name("fax")).sendKeys(contactData.getFaxPhoneNum());
-    driver.findElement(By.name("email")).click();
-    driver.findElement(By.name("email")).clear();
-    driver.findElement(By.name("email")).sendKeys(contactData.getEmail());
-    driver.findElement(By.name("email2")).click();
-    driver.findElement(By.name("email2")).clear();
-    driver.findElement(By.name("email2")).sendKeys(contactData.getEmail2());
-    driver.findElement(By.name("email3")).click();
-    driver.findElement(By.name("email3")).clear();
-    driver.findElement(By.name("email3")).sendKeys(contactData.getEmail3());
-    driver.findElement(By.name("homepage")).click();
-    driver.findElement(By.name("homepage")).clear();
-    driver.findElement(By.name("homepage")).sendKeys(contactData.getHomePage());
-    driver.findElement(By.name("bday")).click();
-    new Select(driver.findElement(By.name("bday"))).selectByVisibleText(contactData.getBirthDay());
-    driver.findElement(By.name("bmonth")).click();
-    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getBirthMonth());
-    driver.findElement(By.name("byear")).click();
-    driver.findElement(By.name("byear")).clear();
-    driver.findElement(By.name("byear")).sendKeys(contactData.getBirthYear());
-    driver.findElement(By.name("aday")).click();
-    new Select(driver.findElement(By.name("aday"))).selectByVisibleText(contactData.getAnniversaryDay());
-    driver.findElement(By.name("amonth")).click();
-    new Select(driver.findElement(By.name("amonth"))).selectByVisibleText(contactData.getAnniversaryMonth());
-    driver.findElement(By.name("ayear")).click();
-    driver.findElement(By.name("ayear")).clear();
-    driver.findElement(By.name("ayear")).sendKeys(contactData.getAnniversaryYear());
-    driver.findElement(By.name("theform")).click();
-    driver.findElement(By.name("new_group")).click();
-    new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-    driver.findElement(By.name("address2")).click();
-    driver.findElement(By.name("address2")).clear();
-    driver.findElement(By.name("address2")).sendKeys(contactData.getSecondaryAddress());
-    driver.findElement(By.name("phone2")).click();
-    driver.findElement(By.name("phone2")).clear();
-    driver.findElement(By.name("phone2")).sendKeys(contactData.getSecondaryHome());
-    driver.findElement(By.name("notes")).click();
-    driver.findElement(By.name("notes")).clear();
-    driver.findElement(By.name("notes")).sendKeys(contactData.getSecondaryNotes());
+    type(By.name("firstname"), contactData.getFirstname());
+    type(By.name("middlename"),contactData.getMiddleName());
+    type(By.name("lastname"), contactData.getLastName());
+    type(By.name("nickname"), contactData.getNickName());
+    type(By.name("title"), contactData.getTitle());
+    type(By.name("company"), contactData.getCompany());
+    type(By.name("address"), contactData.getAddress());
+    type(By.name("home"), contactData.getHomePhoneNum());
+    type(By.name("mobile"), contactData.getMobilePhoneNum());
+    type(By.name("work"),contactData.getWorkPhoneNum());
+    type(By.name("fax"), contactData.getFaxPhoneNum());
+    type(By.name("email"), contactData.getEmail());
+    type(By.name("email2"), contactData.getEmail2());
+    type(By.name("email3"), contactData.getEmail3());
+    type(By.name("homepage"), contactData.getHomePage());
+    click(By.name("bday"));
+    selectElementDropDown(By.name("bday"), contactData.getBirthDay());
+    click(By.name("bmonth"));
+    selectElementDropDown(By.name("bmonth"), contactData.getBirthMonth());
+    type(By.name("byear"), contactData.getBirthYear());
+    click(By.name("aday"));
+    selectElementDropDown(By.name("aday"), contactData.getAnniversaryDay());
+    click(By.name("amonth"));
+    selectElementDropDown(By.name("amonth"), contactData.getAnniversaryMonth());
+    type(By.name("ayear"), contactData.getAnniversaryYear());
+    click(By.name("theform"));
+    click(By.name("new_group"));
+    selectElementDropDown(By.name("new_group"), contactData.getGroup());
+    type(By.name("address2"), contactData.getSecondaryAddress());
+    type(By.name("phone2"), contactData.getSecondaryHome());
+    type(By.name("notes"), contactData.getSecondaryNotes());
   }
 
   public void submitCreatingContact() {
