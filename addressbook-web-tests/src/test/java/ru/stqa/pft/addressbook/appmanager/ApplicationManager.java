@@ -2,7 +2,6 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,7 +9,9 @@ import static org.testng.Assert.fail;
 
 public class ApplicationManager {
   protected WebDriver driver;
-  
+
+  private  NavigationHelper navigationHelper;
+  private GroupHelper groupHelper;
   private ContactHelper contactHelper;
   protected String baseUrl;
   protected boolean acceptNextAlert = true;
@@ -19,7 +20,9 @@ public class ApplicationManager {
   public void initDriver() {
     System.setProperty("webdriver.chrome.driver", "C://stud//maven_java_pft//src//test//resources//chromedriver89.0.4389.23.exe");
     driver = new ChromeDriver();
+    navigationHelper = new NavigationHelper(driver);
     contactHelper = new ContactHelper(driver);
+    groupHelper = new GroupHelper(driver);
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
@@ -40,36 +43,6 @@ public class ApplicationManager {
     driver.findElement(By.name("pass")).clear();
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("//input[@value='Login']")).click();
-  }
-
-
-  public void goToNewGroup() {
-    driver.findElement(By.name("new")).click();
-  }
-
-  public void fillGroupFields(GroupData groupData) {
-    driver.findElement(By.name("group_name")).click();
-    driver.findElement(By.name("group_name")).clear();
-    driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
-    driver.findElement(By.name("group_header")).click();
-    driver.findElement(By.name("group_header")).clear();
-    driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
-    driver.findElement(By.name("group_footer")).click();
-    driver.findElement(By.name("group_footer")).clear();
-    driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
-  }
-
-  public void submitGroupCreation() {
-    driver.findElement(By.name("submit")).click();
-  }
-
-  public void returnToTheGroupPage() {
-    driver.findElement(By.linkText("group page")).click();
-  }
-
-
-  public void goToNewContact() {
-    driver.findElement(By.linkText("add new")).click();
   }
 
 
@@ -108,5 +81,13 @@ public class ApplicationManager {
 
   public ContactHelper getContactHelper() {
     return contactHelper;
+  }
+
+  public GroupHelper getGroupHelper() {
+    return groupHelper;
+  }
+
+  public NavigationHelper getNavigationHelper() {
+    return navigationHelper;
   }
 }
