@@ -31,12 +31,44 @@ public class ApplicationManager {
     }
   }
 
-  public void returnToHomePage() {
-    driver.findElement(By.linkText("home")).click();
+  public void login() {
+    driver.get("http://localhost/addressbook/edit.php");
+    driver.findElement(By.name("user")).clear();
+    driver.findElement(By.name("user")).sendKeys("admin");
+    driver.findElement(By.name("pass")).click();
+    driver.findElement(By.name("pass")).clear();
+    driver.findElement(By.name("pass")).sendKeys("secret");
+    driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
-  public void submitContactCreation() {
-    driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+
+  public void goToNewGroup() {
+    driver.findElement(By.name("new")).click();
+  }
+
+  public void fillGroupFields(GroupData groupData) {
+    driver.findElement(By.name("group_name")).click();
+    driver.findElement(By.name("group_name")).clear();
+    driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
+    driver.findElement(By.name("group_header")).click();
+    driver.findElement(By.name("group_header")).clear();
+    driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
+    driver.findElement(By.name("group_footer")).click();
+    driver.findElement(By.name("group_footer")).clear();
+    driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
+  }
+
+  public void submitGroupCreation() {
+    driver.findElement(By.name("submit")).click();
+  }
+
+  public void returnToTheGroupPage() {
+    driver.findElement(By.linkText("group page")).click();
+  }
+
+
+  public void goToNewContact() {
+    driver.findElement(By.linkText("add new")).click();
   }
 
   public void fillContactFields(ContactData contactData) {
@@ -113,19 +145,14 @@ public class ApplicationManager {
     driver.findElement(By.name("notes")).sendKeys(contactData.getSecondaryNotes());
   }
 
-  public void goToNewContact() {
-    driver.findElement(By.linkText("add new")).click();
+  public void submitCreatingContact() {
+    driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  public void login() {
-    driver.get("http://localhost/addressbook/edit.php");
-    driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.name("pass")).click();
-    driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
-    driver.findElement(By.xpath("//input[@value='Login']")).click();
+  public void returnToHomePage() {
+    driver.findElement(By.linkText("home")).click();
   }
+
 
   private boolean isElementPresent(By by) {
     try {
@@ -160,27 +187,4 @@ public class ApplicationManager {
     }
   }
 
-  public void returnToTheGroupPage() {
-    driver.findElement(By.linkText("group page")).click();
-  }
-
-  public void submitGroupCreation() {
-    driver.findElement(By.name("submit")).click();
-  }
-
-  public void fillGroupFields(GroupData groupData) {
-    driver.findElement(By.name("group_name")).click();
-    driver.findElement(By.name("group_name")).clear();
-    driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
-    driver.findElement(By.name("group_header")).click();
-    driver.findElement(By.name("group_header")).clear();
-    driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
-    driver.findElement(By.name("group_footer")).click();
-    driver.findElement(By.name("group_footer")).clear();
-    driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
-  }
-
-  public void goToNewGroup() {
-    driver.findElement(By.name("new")).click();
-  }
 }

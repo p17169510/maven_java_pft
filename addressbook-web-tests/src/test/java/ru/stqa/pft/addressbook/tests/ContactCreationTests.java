@@ -19,7 +19,7 @@ public class ContactCreationTests extends TestBase {
             "test99999",
             "secondary address", "secondary home", "secondary notes"));
 
-    applicationManager.submitContactCreation();
+    applicationManager.submitCreatingContact();
     applicationManager.returnToHomePage();
   }
 
