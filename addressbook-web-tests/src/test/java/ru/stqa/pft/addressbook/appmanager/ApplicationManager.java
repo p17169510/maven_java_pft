@@ -1,57 +1,45 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.fail;
 
-public class ContactCreationTests {
-  private WebDriver driver;
-  private String baseUrl;
-  private boolean acceptNextAlert = true;
-  private StringBuffer verificationErrors = new StringBuffer();
+public class ApplicationManager {
+  protected WebDriver driver;
+  protected String baseUrl;
+  protected boolean acceptNextAlert = true;
+  protected StringBuffer verificationErrors = new StringBuffer();
 
-  @BeforeMethod
-  public void setUp() throws Exception {
+  public void initDriver() {
     System.setProperty("webdriver.chrome.driver", "C://stud//maven_java_pft//src//test//resources//chromedriver89.0.4389.23.exe");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
-  public void testContactCreationTests() throws Exception {
-    login();
-    newContact();
-    fillContactFields(
-        new ContactData("name", "MiddleName", "LastName", "NickName", "mr",
-            "CompName", "My Home address",
-            "+79130000000", "+777777777", "+495100100", "+495999999",
-            "email@gmail.com", "email2@gmail.com", "email3@gmail.com", "www.homepage.com",
-            "1", "January", "1990",
-            "2", "March", "2001",
-            "test99999",
-            "secondary address", "secondary home", "secondary notes"));
-
-    enter();
-    returnToTheHomePage();
+  public void stopDriver() {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
   }
 
-  private void returnToTheHomePage() {
+  public void returnToHomePage() {
     driver.findElement(By.linkText("home")).click();
   }
 
-  private void enter() {
+  public void submitContactCreation() {
     driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  private void fillContactFields(ContactData contactData) {
+  public void fillContactFields(ContactData contactData) {
     driver.findElement(By.name("firstname")).click();
     driver.findElement(By.name("firstname")).clear();
     driver.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
@@ -125,11 +113,11 @@ public class ContactCreationTests {
     driver.findElement(By.name("notes")).sendKeys(contactData.getSecondaryNotes());
   }
 
-  private void newContact() {
+  public void goToNewContact() {
     driver.findElement(By.linkText("add new")).click();
   }
 
-  private void login() {
+  public void login() {
     driver.get("http://localhost/addressbook/edit.php");
     driver.findElement(By.name("user")).clear();
     driver.findElement(By.name("user")).sendKeys("admin");
@@ -137,15 +125,6 @@ public class ContactCreationTests {
     driver.findElement(By.name("pass")).clear();
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("//input[@value='Login']")).click();
-  }
-
-  @AfterMethod
-  public void tearDown() throws Exception {
-    driver.quit();
-    String verificationErrorString = verificationErrors.toString();
-    if (!"".equals(verificationErrorString)) {
-      fail(verificationErrorString);
-    }
   }
 
   private boolean isElementPresent(By by) {
@@ -179,5 +158,29 @@ public class ContactCreationTests {
     } finally {
       acceptNextAlert = true;
     }
+  }
+
+  public void returnToTheGroupPage() {
+    driver.findElement(By.linkText("group page")).click();
+  }
+
+  public void submitGroupCreation() {
+    driver.findElement(By.name("submit")).click();
+  }
+
+  public void fillGroupFields(GroupData groupData) {
+    driver.findElement(By.name("group_name")).click();
+    driver.findElement(By.name("group_name")).clear();
+    driver.findElement(By.name("group_name")).sendKeys(groupData.getGroupName());
+    driver.findElement(By.name("group_header")).click();
+    driver.findElement(By.name("group_header")).clear();
+    driver.findElement(By.name("group_header")).sendKeys(groupData.getGroupHeader());
+    driver.findElement(By.name("group_footer")).click();
+    driver.findElement(By.name("group_footer")).clear();
+    driver.findElement(By.name("group_footer")).sendKeys(groupData.getGroupFooter());
+  }
+
+  public void goToNewGroup() {
+    driver.findElement(By.name("new")).click();
   }
 }
