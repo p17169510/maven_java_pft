@@ -10,6 +10,7 @@ import static org.testng.Assert.fail;
 public class ApplicationManager {
   protected WebDriver driver;
 
+  private HomeHelper homeHelper;
   private SessionHelper sessionHelper;
   private  NavigationHelper navigationHelper;
   private GroupHelper groupHelper;
@@ -21,6 +22,7 @@ public class ApplicationManager {
   public void initDriver() {
     System.setProperty("webdriver.chrome.driver", "C://stud//maven_java_pft//src//test//resources//chromedriver89.0.4389.23.exe");
     driver = new ChromeDriver();
+    homeHelper = new HomeHelper(driver);
     navigationHelper = new NavigationHelper(driver);
     contactHelper = new ContactHelper(driver);
     groupHelper = new GroupHelper(driver);
@@ -29,6 +31,7 @@ public class ApplicationManager {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     sessionHelper.login("admin", "secret");
   }
+
 
   public void stopDriver() {
     driver.quit();
@@ -82,5 +85,9 @@ public class ApplicationManager {
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
+  }
+
+  public HomeHelper getHomeHelper() {
+    return homeHelper;
   }
 }

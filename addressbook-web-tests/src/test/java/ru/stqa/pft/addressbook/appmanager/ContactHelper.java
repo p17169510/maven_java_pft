@@ -4,8 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactHelper  extends BaseHelper {
+import static ru.stqa.pft.addressbook.tests.TestBase.applicationManager;
 
+public class ContactHelper  extends BaseHelper {
   public ContactHelper(WebDriver driver) {
     super(driver);
   }
@@ -50,5 +51,13 @@ public class ContactHelper  extends BaseHelper {
 
   public void returnToHomePage() {
     driver.findElement(By.linkText("home")).click();
+  }
+
+  public void createContact(ContactData data) {
+    applicationManager.getNavigationHelper().goToNewContact();
+    applicationManager.getContactHelper().fillContactFields(data);
+
+    applicationManager.getContactHelper().submitCreatingContact();
+    applicationManager.getContactHelper().returnToHomePage();
   }
 }
