@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86225245-1c55-44f4-98d9-f85f22c8a129" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/HomeHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactEditionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ContactHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,25 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactEditionTests.contactDeleteTest">
+  <component name="RunManager" selected="TestNG.ContactCreationTests.test">
+    <configuration name="ContactCreationTests.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.ContactCreationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContactCreationTests.testContactCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests" />
       <extension name="coverage">
@@ -134,24 +149,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupCreationTests.testGroupCreation" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.tests.GroupCreationTests" />
-      <option name="METHOD_NAME" value="testGroupCreation" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GroupModificationTests.testGroupModification" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="maven_java_pft" />
       <extension name="coverage">
@@ -172,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactCreationTests.test" />
         <item itemvalue="TestNG.ContactEditionTests.contactDeleteTest" />
         <item itemvalue="TestNG.ContactCreationTests.testContactCreation" />
         <item itemvalue="TestNG.GroupCreationTests.testGroupCreationTests" />
         <item itemvalue="TestNG.GroupModificationTests.testGroupModification" />
-        <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617114812544</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="EXCERSISE 6: added ContactEditionTests+HomeHelper+method of creation contact">
+      <created>1617200568453</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617200568453</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +253,8 @@
     <MESSAGE value="EXCERSISE 5: added NavigationHelper.java and GroupHelper.java" />
     <MESSAGE value="EXCERSISE 5: added method goToGroupsForm" />
     <MESSAGE value="EXCERSISE 5: Created BaseHelper and refactored all Helper classes with BaseHelper methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="EXCERSISE 5: Created BaseHelper and refactored all Helper classes with BaseHelper methods" />
+    <MESSAGE value="EXCERSISE 6: added ContactEditionTests+HomeHelper+method of creation contact" />
+    <option name="LAST_COMMIT_MESSAGE" value="EXCERSISE 6: added ContactEditionTests+HomeHelper+method of creation contact" />
   </component>
   <component name="WindowStateProjectService">
     <state x="576" y="130" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1617114347319">
@@ -268,29 +273,29 @@
       <screen x="0" y="0" width="1304" height="768" />
     </state>
     <state x="659" y="109" key="#xdebugger.evaluate/0.0.1304.768@0.0.1304.768" timestamp="1617105114533" />
-    <state x="155" y="87" width="755" height="587" key="CommitChangelistDialog2" timestamp="1617114812026">
+    <state x="444" y="130" width="755" height="587" key="CommitChangelistDialog2" timestamp="1617200567860">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="155" y="87" width="755" height="587" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1617114812026" />
-    <state width="1260" height="245" key="GridCell.Tab.0.bottom" timestamp="1617200396589">
+    <state x="444" y="130" width="755" height="587" key="CommitChangelistDialog2/0.0.1304.768@0.0.1304.768" timestamp="1617200567860" />
+    <state width="1260" height="245" key="GridCell.Tab.0.bottom" timestamp="1617200844985">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="245" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617200396589" />
+    <state width="1260" height="245" key="GridCell.Tab.0.bottom/0.0.1304.768@0.0.1304.768" timestamp="1617200844985" />
     <state width="1322" height="205" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616432737232" />
-    <state width="1260" height="245" key="GridCell.Tab.0.center" timestamp="1617200396589">
+    <state width="1260" height="245" key="GridCell.Tab.0.center" timestamp="1617200844985">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="245" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1617200396589" />
+    <state width="1260" height="245" key="GridCell.Tab.0.center/0.0.1304.768@0.0.1304.768" timestamp="1617200844985" />
     <state width="1322" height="205" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="245" key="GridCell.Tab.0.left" timestamp="1617200396588">
+    <state width="1260" height="245" key="GridCell.Tab.0.left" timestamp="1617200844984">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="245" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1617200396588" />
+    <state width="1260" height="245" key="GridCell.Tab.0.left/0.0.1304.768@0.0.1304.768" timestamp="1617200844984" />
     <state width="1322" height="205" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
-    <state width="1260" height="245" key="GridCell.Tab.0.right" timestamp="1617200396589">
+    <state width="1260" height="245" key="GridCell.Tab.0.right" timestamp="1617200844985">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state width="1260" height="245" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1617200396589" />
+    <state width="1260" height="245" key="GridCell.Tab.0.right/0.0.1304.768@0.0.1304.768" timestamp="1617200844985" />
     <state width="1322" height="205" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616432737231" />
     <state width="1260" height="196" key="GridCell.Tab.1.bottom" timestamp="1617197913731">
       <screen x="0" y="0" width="1304" height="768" />
@@ -325,10 +330,10 @@
     </state>
     <state x="176" y="0" key="SettingsEditor/0.0.1304.768@0.0.1304.768" timestamp="1617032957535" />
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1616349925810" />
-    <state x="244" y="116" key="Vcs.Push.Dialog.v2" timestamp="1617114813851">
+    <state x="244" y="116" key="Vcs.Push.Dialog.v2" timestamp="1617200569782">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
-    <state x="244" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1617114813851" />
+    <state x="244" y="116" key="Vcs.Push.Dialog.v2/0.0.1304.768@0.0.1304.768" timestamp="1617200569782" />
     <state x="401" y="117" key="VcsDiffUtil.ChangesDialog" timestamp="1617094278462">
       <screen x="0" y="0" width="1304" height="768" />
     </state>
